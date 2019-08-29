@@ -9,11 +9,11 @@
 - 簡素化のためにDI等は行わない
 
 ```bash
-├── src                
+└── src                
    ├── functions      <-- controler相当
-   └── applications    
-   └── infra           
-   | └── repository    
+   ├── applications    
+   ├── infra           
+   │  └── repository    
    └── models         
 ```
 
