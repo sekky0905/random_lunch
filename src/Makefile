@@ -4,12 +4,12 @@ deps:
 	go get -u ./...
 
 clean: 
-	rm -rf ./dist/choose_stores ./dist/create_store ./dist/list_stores
+	rm -rf ./dist/choose_shops ./dist/create_shop ./dist/list_shops
 	
 build:
-	GOOS=linux GOARCH=amd64 go build -o ./dist/choose_stores ./functions/choose_stores
-	GOOS=linux GOARCH=amd64 go build -o ./dist/create_store ./functions/create_store
-	GOOS=linux GOARCH=amd64 go build -o ./dist/list_stores ./functions/list_stores
+	GOOS=linux GOARCH=amd64 go build -o ./dist/choose_shops ./functions/choose_shops
+	GOOS=linux GOARCH=amd64 go build -o ./dist/create_shop ./functions/create_shop
+	GOOS=linux GOARCH=amd64 go build -o ./dist/list_shops ./functions/list_shops
 
 package:
 	sam package --template-file template.yaml --output-template-file output-template.yaml --s3-bucket random-lunch --profile // 実際にはここに profile を書く
