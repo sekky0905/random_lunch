@@ -9,11 +9,11 @@ Globals:
     Timeout: 5
 
 Resources:
-  ChooseStoresFunction:
+  ChooseShopsFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: dist/
-      Handler: choose_stores
+      Handler: choose_shops
       Runtime: go1.x
       Tracing: Active # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
       Events:
@@ -26,11 +26,11 @@ Resources:
         Variables:
           PARAM1: VALUE
       Policies: AmazonDynamoDBReadOnlyAccess
-  CreateStoreFunction:
+  CreateShopFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: dist/
-      Handler: create_store
+      Handler: create_shop
       Runtime: go1.x
       Tracing: Active # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
       Events:
@@ -43,11 +43,11 @@ Resources:
         Variables:
           PARAM1: VALUE
       Policies: AmazonDynamoDBFullAccess
-  ListStoresFunction:
+  ListShopsFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: dist/
-      Handler: list_stores
+      Handler: list_shops
       Runtime: go1.x
       Tracing: Active # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
       Events:
